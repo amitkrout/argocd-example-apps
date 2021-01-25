@@ -18,3 +18,8 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+      ignoreDifferences:
+      - group: argoproj.io
+        jsonPointers:
+        - /status
+        kind: Application
